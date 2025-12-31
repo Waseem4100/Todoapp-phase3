@@ -31,7 +31,10 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **Article I Compliance**: Does this plan stem from an approved Spec?
+- [ ] **Article III Compliance**: Does this plan strictly adhere to the current Phase scope?
+- [ ] **Article IV Compliance**: Does the proposed stack stick to Python/FastAPI/SQLModel/Neon?
+- [ ] **Article V Compliance**: Does the design follow Clean Architecture and SoC?
 
 ## Project Structure
 
