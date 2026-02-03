@@ -1,14 +1,14 @@
 <!--
 Sync Impact Report
-- Version change: 0.1.0 -> 1.0.0
-- List of modified principles (old templates -> new "Evolution of Todo" global rules)
-- Added sections: Article I (SDD), Article II (Agent Behavior), Article III (Phase Governance), Article IV (Tech Constraints), Article V (Quality Principles)
-- Removed sections: N/A (Full replacement of generic placeholders)
+- Version change: 1.0.0 -> 1.1.0
+- List of modified principles: Article IV (Technology Constraints) completely revised to reflect Phase I and Phase II requirements
+- Added sections: Phase I and Phase II technology matrices, Phase Isolation Rules
+- Removed sections: Generic technology constraints from previous version
 - Templates requiring updates:
   - .specify/templates/spec-template.md (UP-TO-DATE)
   - .specify/templates/plan-template.md (UP-TO-DATE)
   - .specify/templates/tasks-template.md (UP-TO-DATE)
-- Follow-up TODOs: Ensure PHR is created as 'constitution' stage.
+- Follow-up TODOs: None
 -->
 
 # Evolution of Todo Constitution
@@ -72,18 +72,27 @@ This Constitution defines the mandatory rules, constraints, and principles gover
 
 The following technology constraints are binding across all phases and may not be substituted without explicit specification approval.
 
-### Backend
-* **Python**
-* **FastAPI**
-* **SQLModel**
-* **Neon DB (PostgreSQL)**
+### Phase I: In-Memory Console Application
+* **Architecture**: Console application only
+* **Storage**: In-memory only (no persistent storage)
+* **Frontend**: None
+* **Backend**: Simple command-line interface
+* **Authentication**: Not allowed
+* **Database**: Not allowed
 
-### Frontend
-* **Next.js** (introduced only in later phases when explicitly specified)
+### Phase II: Full-Stack Web Application
+* **Backend**: Python REST API
+* **Database**: Neon Serverless PostgreSQL
+* **ORM/Data layer**: SQLModel or equivalent
+* **Frontend**: Next.js (React, TypeScript)
+* **Authentication**: Better Auth (signup/signin)
+* **Architecture**: Full-stack web application
+* **AI/Agent frameworks**: Not allowed until later phases
 
-### AI & Orchestration
+### AI & Orchestration (Phases III and Later)
 * **OpenAI Agents SDK**
 * **Model Context Protocol (MCP)**
+* **Other AI/agent frameworks**: Only allowed starting Phase III
 
 ### Infrastructure (Later Phases Only, When Specified)
 * **Docker**
@@ -91,7 +100,12 @@ The following technology constraints are binding across all phases and may not b
 * **Kafka**
 * **Dapr**
 
-Agents may not introduce alternative technologies or frameworks outside approved specifications.
+### Phase Isolation Rules
+* **Authentication**: Allowed starting Phase II only
+* **Web frontend**: Allowed starting Phase II only
+* **Neon PostgreSQL**: Allowed starting Phase II only
+* **AI or agent frameworks**: Prohibited until Phase III and later
+* No features, abstractions, or infrastructure from future phases may appear in earlier phases
 
 ---
 
@@ -122,4 +136,4 @@ This Constitution is the **supreme governing document** for the **Evolution of T
 
 ---
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-31 | **Last Amended**: 2025-12-31
+**Version**: 1.1.0 | **Ratified**: 2025-12-31 | **Last Amended**: 2026-02-03

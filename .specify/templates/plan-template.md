@@ -33,7 +33,7 @@
 
 - [ ] **Article I Compliance**: Does this plan stem from an approved Spec?
 - [ ] **Article III Compliance**: Does this plan strictly adhere to the current Phase scope?
-- [ ] **Article IV Compliance**: Does the proposed stack stick to Python/FastAPI/SQLModel/Neon?
+- [ ] **Article IV Compliance**: Does the proposed stack comply with Phase-specific technology constraints?
 - [ ] **Article V Compliance**: Does the design follow Clean Architecture and SoC?
 
 ## Project Structure

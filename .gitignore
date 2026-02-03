@@ -1,34 +1,91 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
+*.py[cod]
+*.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.env
+.venv
 venv/
-ENV/
-env/
+
+# Backend
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/venv/
+backend/.venv/
+backend/.env
+backend/logs/
+backend/*.log
+backend/media/
+backend/staticfiles/
+backend/.coverage
+backend/htmlcov/
+backend/.pytest_cache/
+
+# Node.js/Next.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+.next/
+out/
+coverage/
+.nyc_output
+.nyc_coverage
+.coverage
+.nycrc
+jest/
+jest.config.js
 dist/
 build/
-*.egg-info/
-
-# Unit test / coverage
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Environments
-.env
+*.tsbuildinfo
+.next
+.cache/
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*
 
-# OS
-.DS_Store
-Thumbs.db
-
-# IDEs
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
