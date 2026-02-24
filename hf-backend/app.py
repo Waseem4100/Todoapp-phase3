@@ -500,7 +500,7 @@ async def chat_with_bot(
     try:
         # Configure Gemini
         genai.configure(api_key=gemini_api_key)
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         # Get user's todos for context
         with get_session() as session:
