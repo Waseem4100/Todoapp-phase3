@@ -7,6 +7,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes.auth import router as auth_router
 from api.routes.todos import router as todos_router
+from api.routes.chatbot import router as chatbot_router
 from sqlmodel import SQLModel
 from database.database import engine
 from models.user import User
@@ -26,6 +27,7 @@ app.add_middleware(
 # Include API routes
 app.include_router(auth_router, prefix="/auth", tags=["authentication"])
 app.include_router(todos_router, prefix="/todos", tags=["todos"])
+app.include_router(chatbot_router, prefix="/chatbot", tags=["chatbot"])
 
 @app.get("/")
 def read_root():

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import TodoList from '../components/TodoList';
+import ChatBot from '../components/ChatBot';
 import AuthService from '../services/auth';
 
 // Dynamically import Layout with no SSR to avoid localStorage issues
@@ -68,6 +69,7 @@ const TodosPage: React.FC = () => {
     <DynamicLayout>
       <div className="page-container">
         <TodoList />
+        <ChatBot />
       </div>
     </DynamicLayout>
   );
